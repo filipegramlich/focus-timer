@@ -1,10 +1,14 @@
-export function Timer (){
+export function Timer (
+    minutesDisplay,
+    secondsDisplay,
+    timeTimeOut,
+    ){
 
     function updateTimerDisplay (minutes,seconds){
         minutesDisplay.textContent = String(minutes).padStart(2, "0")
         secondsDisplay.textContent = String(seconds).padStart(2,"0")
     }
-    function resetTimer(){
+    function reset(){
         updateTimerDisplay(minutes,0)
         clearTimeout(timeTimeOut)
     }
@@ -33,6 +37,8 @@ export function Timer (){
         }, 1000)
     }
     return {
-        coutdown
+        coutdown,
+        reset,
+        updateTimerDisplay
     }
 }
