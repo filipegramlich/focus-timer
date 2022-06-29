@@ -22,11 +22,20 @@ export function Controls (
         buttonPause.classList.add("hide")    
         buttonPlay.classList.remove("hide") 
     }
+    function getMinutes(){
+        let newMinutes = prompt("Quantos minutos são?")
+        if(!newMinutes) {
+            return false
+        }
+        return newMinutes
+        
+    }
 
     return{
         reset,
         play,
-        pause
+        pause,
+        getMinutes
 
     }
 }

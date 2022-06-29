@@ -1,4 +1,3 @@
-
 import {Controls} from "./controls.js"
 import {Timer} from "./timer.js"
 
@@ -37,7 +36,7 @@ buttonPause.addEventListener("click",function (){
 })
 buttonStop.addEventListener("click",function (){
     timer.reset()
-    timer.reset()
+    controls.reset()
 })
 buttonSound_on.addEventListener("click",function (){
     buttonSound_on.classList.add("hide")
@@ -48,11 +47,11 @@ buttonSound_off.addEventListener("click",function (){
     buttonSound_on.classList.remove("hide")
 })
 buttonSet.addEventListener("click",function (){
-    let newMinutes = prompt("Quantos minutos são?")
+    let newMinutes = controls.getMinutes
     if(!newMinutes) {
         resetTimer()
         return
     }
     minutes = newMinutes
-    timer.updateTimerDisplay(minutes,0)
+    timer.updateDisplay(minutes,0)
 })
