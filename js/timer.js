@@ -1,5 +1,5 @@
-import Sound from "./sounds"
-const sound = Sound()
+import Sound from "./sounds.js"
+
 export default function Timer ({
     minutesDisplay,
     secondsDisplay,
