@@ -47,12 +47,12 @@ buttonStop.addEventListener("click",function (){
 buttonSound_on.addEventListener("click",function (){
     buttonSound_on.classList.add("hide")
     buttonSound_off.classList.remove("hide")
-    sound.bgAudio.play()
+    sound.bgAudio.pause()
 })
 buttonSound_off.addEventListener("click",function (){
     buttonSound_off.classList.add("hide")
     buttonSound_on.classList.remove("hide")
-    sound.bgAudio.pause()
+    sound.bgAudio.play()
 })
 buttonSet.addEventListener("click",function (){
     let newMinutes = controls.getMinutes()
